@@ -12,9 +12,13 @@ function Mail() {
 
   let getApi = () => {
     try {
-      let data = axios.post(`http://localhost:4000/sendmail`, userData, {
-        mode: "cors",
-      });
+      let data = axios.post(
+        `https://nodemailer-b.onrender.com/sendmail`,
+        userData,
+        {
+          mode: "cors",
+        }
+      );
       console.log(data);
     } catch (error) {
       console.log(error);
