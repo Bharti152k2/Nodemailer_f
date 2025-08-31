@@ -14,10 +14,7 @@ function Mail() {
     try {
       let data = axios.post(
         `https://nodemailer-b.onrender.com/sendmail`,
-        userData,
-        {
-          mode: "cors",
-        }
+        userData
       );
       console.log(data);
     } catch (error) {
